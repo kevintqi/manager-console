@@ -1,0 +1,24 @@
+<div>
+  <form class="w3-container w3-small" (ngSubmit)="onSubmit()">
+    <div class="w3-panel w3-white w3-card-4">
+      <span (click)="showLanguage=!showLanguage">
+        <h4>
+        <i class="material-icons" *ngIf="showLanguage">expand_more</i> Language
+        </h4>
+        </span>
+      <div *ngIf="showLanguage">
+        <p>
+          <input class="w3-radio" type="radio" value="en" name="en" [(ngModel)]="settings.language" />
+          <label class="w3-text-blue" for="en"><b>English</b></label>
+        </p>
+        <p>
+          <input class="w3-radio" type="radio" value="es" name="es" [(ngModel)]="settings.language" />
+          <label class="w3-text-blue" for="es"><b>Español</b></label>
+        </p>
+      </div>
+    </div>
+    <div class="w3-card-4">
+      <p> <button class="w3-button w3-blue w3-block" type="submit" >Save</button></p>
+    </div>
+  </form>
+</div>

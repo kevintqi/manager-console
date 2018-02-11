@@ -1,0 +1,33 @@
+<div class="w3-container">
+  <form class="w3-container" (ngSubmit)="login()" #loginForm="ngForm">
+    <div class="w3-panel w3-white w3-card-4" id="login-form">
+      <div class="w3-container w3-center">
+        <img src="{{user.icon}}" alt="Avatar" class="avatar w3-circle">
+      </div>
+      <div class="w3-container">
+        <p>
+          <label for="email">
+            <b>Email</b>
+          </label>
+          <input class="w3-input w3-light-grey" type="text" placeholder="Enter Email" id="email" name="email" [(ngModel)]="user.email"
+            required>
+        </p>
+        <p>
+          <label for="password">
+            <b>Password</b>
+          </label>
+          <input class="w3-input w3-light-grey" type="password" placeholder="Enter Password" id="password" name="password" [(ngModel)]="user.password"
+            required>
+        </p>
+        <p>
+          <button class="w3-button w3-blue w3-block" type="submit" [disabled]="!loginForm.form.valid">Login</button>
+        </p>
+        <p>
+          <label>
+            <input type="checkbox" checked="checked" [(ngModel)]="rememberMe" name="rememberMe" #spy>Remember me
+          </label>
+        </p>
+      </div>
+    </div>
+  </form>
+</div>

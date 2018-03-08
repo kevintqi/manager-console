@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { SettingsComponent } from './settings/settings.component';
@@ -20,8 +20,7 @@ import { DataRepositoryService } from './data-repository.service';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClient,
-    HttpHeaders
+    HttpClientModule
   ],
   providers: [DataRepositoryService],
   bootstrap: [AppComponent]
